@@ -4,6 +4,8 @@
         "mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
+    <!--必须严格按照顺序(properties?,classPathEntry*,context+)-->
+    <properties resource="db.properties"/>
     <classPathEntry location="C:\Users\admin\.m2\repository\mysql\mysql-connector-java\5.1.44\mysql-connector-java-5.1.44.jar"/>
     <context id="MysqlTables" targetRuntime="MyBatis3">
         <!--去除注释  -->
@@ -11,26 +13,26 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/gp?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"
-                        userId="root"
-                        password="123456">
+        <jdbcConnection driverClass="${jdbc.driverClassName}"
+                        connectionURL="${jdbc.url}"
+                        userId="${jdbc.username}"
+                        password="${jdbc.password}">
         </jdbcConnection>
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.learn.mybatis.beans" targetProject="D:\workspace\learn-mybatis\src\main\java">
+        <javaModelGenerator targetPackage="com.learn.mybatis.beans" targetProject="${targetJavaProject}\src\main\java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="xml" targetProject="D:\workspace\learn-mybatis\src\main\java\com\learn\mybatis\mapper">
+        <sqlMapGenerator targetPackage="xml" targetProject="${targetJavaProject}\src\main\java\com\learn\mybatis\mapper">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.learn.mybatis.mapper" targetProject="D:\workspace\learn-mybatis\src\main\java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.learn.mybatis.mapper" targetProject="${targetJavaProject}\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 

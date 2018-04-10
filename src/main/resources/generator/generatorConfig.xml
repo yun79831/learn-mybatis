@@ -6,7 +6,8 @@
 <generatorConfiguration>
     <!--必须严格按照顺序(properties?,classPathEntry*,context+)-->
     <properties resource="db.properties"/>
-    <classPathEntry location="C:\Users\admin\.m2\repository\mysql\mysql-connector-java\5.1.44\mysql-connector-java-5.1.44.jar"/>
+    <classPathEntry location="C:\Users\ghost\.m2\repository\mysql\mysql-connector-java\5.1.14\mysql-connector-java-5.1.14.jar"/>
+    <!--<classPathEntry location="C:\Users\admin\.m2\repository\mysql\mysql-connector-java\5.1.44\mysql-connector-java-5.1.44.jar"/>-->
     <context id="MysqlTables" targetRuntime="MyBatis3">
         <!--去除注释  -->
         <commentGenerator>
@@ -28,7 +29,7 @@
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="xml" targetProject="${targetJavaProject}\src\main\java\com\learn\mybatis\mapper">
+        <sqlMapGenerator targetPackage="xml" targetProject="${targetJavaProject}\src\main\resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
@@ -36,10 +37,12 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-
+       <!-- 需要生成的表-->
         <table schema="gp" tableName="posts" domainObjectName="Posts">
             <property name="useActualColumnNames" value="false"/>
         </table>
-
+        <table schema="gp" tableName="test" domainObjectName="Test">
+        <property name="useActualColumnNames" value="false"/>
+        </table>
     </context>
 </generatorConfiguration>

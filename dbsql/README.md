@@ -36,25 +36,8 @@ git、maven、idea学习教程 http://bbs.gupaoedu.com/forum.php?mod=viewthread&
 3.MyBatis的plugin实现机制
  
 4.lazy loading 是怎么做到的？
- 
-部分笔记
- 
-createResultObject
- 
-1.族群隔离 
-2.分类选择大类处理
-3.日志、共性动作很好的分离
- 
- 
-同源下的delegate -->装饰器
- 
-controller
-service 
-    rpc
-    rpc
-    rpc
-     
-     
+
+    
 1.0版本
  
 TestMapper --- > TestMapper.xml

@@ -29,7 +29,7 @@
             </dataSource>
         </environment>
     </environments>
-    <!--<mappers>-->
-        <!--<mapper resource="UserInfoMapper.xml"/>-->
-    <!--</mappers>-->
+    <mappers>
+        <mapper resource="xml/TestMapper.xml"/>
+    </mappers>
 </configuration>

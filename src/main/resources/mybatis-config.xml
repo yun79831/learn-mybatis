@@ -5,17 +5,15 @@
 <configuration>
     <properties resource="db.properties"/>
 
-
-    <!--<typeAliases>-->
-        <!--<typeAlias type="com.gupao.peter.showme.mybatis.beans.UserInfo"-->
-                   <!--alias="userInfo"/>-->
-    <!--</typeAliases>-->
-    <!--<typeHandlers>-->
-        <!--<typeHandler handler="com.gupao.peter.showme.mybatis.handler.ListTypeHandler"/>-->
-    <!--</typeHandlers>-->
+    <typeAliases>
+        <typeAlias type="com.learn.mybatis.beans.Author" alias="author"/>
+    </typeAliases>
+    <typeHandlers>
+        <typeHandler handler="com.learn.mybatis.typehandler.StringTypeHandler"/>
+    </typeHandlers>
+    
     <!--<plugins>-->
-        <!--<plugin interceptor="com.gupao.peter.showme.mybatis.interceptor.FirstInterceptor"></plugin>-->
-        <!--<plugin interceptor="com.gupao.peter.showme.mybatis.interceptor.SecondInterceptor"></plugin>-->
+        <!--<plugin interceptor="com.learn.mybatis.plugins.QueryPlugin"></plugin>-->
     <!--</plugins>-->
 
     <environments default="development">
@@ -30,6 +28,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="xml/TestMapper.xml"/>
+        <mapper resource="xml/AuthorMapper.xml"/>
     </mappers>
 </configuration>

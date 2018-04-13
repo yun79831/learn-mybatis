@@ -3,14 +3,14 @@ package com.learn.mybatis.beans;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestExample {
+public class AuthorExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public TestExample() {
+    public AuthorExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -104,193 +104,133 @@ public class TestExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andIdIsNull() {
-            addCriterion("id is null");
+        public Criteria andAidIsNull() {
+            addCriterion("aid is null");
             return (Criteria) this;
         }
 
-        public Criteria andIdIsNotNull() {
-            addCriterion("id is not null");
+        public Criteria andAidIsNotNull() {
+            addCriterion("aid is not null");
             return (Criteria) this;
         }
 
-        public Criteria andIdEqualTo(Integer value) {
-            addCriterion("id =", value, "id");
+        public Criteria andAidEqualTo(Integer value) {
+            addCriterion("aid =", value, "aid");
             return (Criteria) this;
         }
 
-        public Criteria andIdNotEqualTo(Integer value) {
-            addCriterion("id <>", value, "id");
+        public Criteria andAidNotEqualTo(Integer value) {
+            addCriterion("aid <>", value, "aid");
             return (Criteria) this;
         }
 
-        public Criteria andIdGreaterThan(Integer value) {
-            addCriterion("id >", value, "id");
+        public Criteria andAidGreaterThan(Integer value) {
+            addCriterion("aid >", value, "aid");
             return (Criteria) this;
         }
 
-        public Criteria andIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("id >=", value, "id");
+        public Criteria andAidGreaterThanOrEqualTo(Integer value) {
+            addCriterion("aid >=", value, "aid");
             return (Criteria) this;
         }
 
-        public Criteria andIdLessThan(Integer value) {
-            addCriterion("id <", value, "id");
+        public Criteria andAidLessThan(Integer value) {
+            addCriterion("aid <", value, "aid");
             return (Criteria) this;
         }
 
-        public Criteria andIdLessThanOrEqualTo(Integer value) {
-            addCriterion("id <=", value, "id");
+        public Criteria andAidLessThanOrEqualTo(Integer value) {
+            addCriterion("aid <=", value, "aid");
             return (Criteria) this;
         }
 
-        public Criteria andIdIn(List<Integer> values) {
-            addCriterion("id in", values, "id");
+        public Criteria andAidIn(List<Integer> values) {
+            addCriterion("aid in", values, "aid");
             return (Criteria) this;
         }
 
-        public Criteria andIdNotIn(List<Integer> values) {
-            addCriterion("id not in", values, "id");
+        public Criteria andAidNotIn(List<Integer> values) {
+            addCriterion("aid not in", values, "aid");
             return (Criteria) this;
         }
 
-        public Criteria andIdBetween(Integer value1, Integer value2) {
-            addCriterion("id between", value1, value2, "id");
+        public Criteria andAidBetween(Integer value1, Integer value2) {
+            addCriterion("aid between", value1, value2, "aid");
             return (Criteria) this;
         }
 
-        public Criteria andIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("id not between", value1, value2, "id");
+        public Criteria andAidNotBetween(Integer value1, Integer value2) {
+            addCriterion("aid not between", value1, value2, "aid");
             return (Criteria) this;
         }
 
-        public Criteria andNumsIsNull() {
-            addCriterion("nums is null");
+        public Criteria andAuthorNameIsNull() {
+            addCriterion("author_name is null");
             return (Criteria) this;
         }
 
-        public Criteria andNumsIsNotNull() {
-            addCriterion("nums is not null");
+        public Criteria andAuthorNameIsNotNull() {
+            addCriterion("author_name is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNumsEqualTo(Integer value) {
-            addCriterion("nums =", value, "nums");
+        public Criteria andAuthorNameEqualTo(String value) {
+            addCriterion("author_name =", value, "authorName");
             return (Criteria) this;
         }
 
-        public Criteria andNumsNotEqualTo(Integer value) {
-            addCriterion("nums <>", value, "nums");
+        public Criteria andAuthorNameNotEqualTo(String value) {
+            addCriterion("author_name <>", value, "authorName");
             return (Criteria) this;
         }
 
-        public Criteria andNumsGreaterThan(Integer value) {
-            addCriterion("nums >", value, "nums");
+        public Criteria andAuthorNameGreaterThan(String value) {
+            addCriterion("author_name >", value, "authorName");
             return (Criteria) this;
         }
 
-        public Criteria andNumsGreaterThanOrEqualTo(Integer value) {
-            addCriterion("nums >=", value, "nums");
+        public Criteria andAuthorNameGreaterThanOrEqualTo(String value) {
+            addCriterion("author_name >=", value, "authorName");
             return (Criteria) this;
         }
 
-        public Criteria andNumsLessThan(Integer value) {
-            addCriterion("nums <", value, "nums");
+        public Criteria andAuthorNameLessThan(String value) {
+            addCriterion("author_name <", value, "authorName");
             return (Criteria) this;
         }
 
-        public Criteria andNumsLessThanOrEqualTo(Integer value) {
-            addCriterion("nums <=", value, "nums");
+        public Criteria andAuthorNameLessThanOrEqualTo(String value) {
+            addCriterion("author_name <=", value, "authorName");
             return (Criteria) this;
         }
 
-        public Criteria andNumsIn(List<Integer> values) {
-            addCriterion("nums in", values, "nums");
+        public Criteria andAuthorNameLike(String value) {
+            addCriterion("author_name like", value, "authorName");
             return (Criteria) this;
         }
 
-        public Criteria andNumsNotIn(List<Integer> values) {
-            addCriterion("nums not in", values, "nums");
+        public Criteria andAuthorNameNotLike(String value) {
+            addCriterion("author_name not like", value, "authorName");
             return (Criteria) this;
         }
 
-        public Criteria andNumsBetween(Integer value1, Integer value2) {
-            addCriterion("nums between", value1, value2, "nums");
+        public Criteria andAuthorNameIn(List<String> values) {
+            addCriterion("author_name in", values, "authorName");
             return (Criteria) this;
         }
 
-        public Criteria andNumsNotBetween(Integer value1, Integer value2) {
-            addCriterion("nums not between", value1, value2, "nums");
+        public Criteria andAuthorNameNotIn(List<String> values) {
+            addCriterion("author_name not in", values, "authorName");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNull() {
-            addCriterion("name is null");
+        public Criteria andAuthorNameBetween(String value1, String value2) {
+            addCriterion("author_name between", value1, value2, "authorName");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNotNull() {
-            addCriterion("name is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andNameEqualTo(String value) {
-            addCriterion("name =", value, "name");
-            return (Criteria) this;
-        }
-
-        public Criteria andNameNotEqualTo(String value) {
-            addCriterion("name <>", value, "name");
-            return (Criteria) this;
-        }
-
-        public Criteria andNameGreaterThan(String value) {
-            addCriterion("name >", value, "name");
-            return (Criteria) this;
-        }
-
-        public Criteria andNameGreaterThanOrEqualTo(String value) {
-            addCriterion("name >=", value, "name");
-            return (Criteria) this;
-        }
-
-        public Criteria andNameLessThan(String value) {
-            addCriterion("name <", value, "name");
-            return (Criteria) this;
-        }
-
-        public Criteria andNameLessThanOrEqualTo(String value) {
-            addCriterion("name <=", value, "name");
-            return (Criteria) this;
-        }
-
-        public Criteria andNameLike(String value) {
-            addCriterion("name like", value, "name");
-            return (Criteria) this;
-        }
-
-        public Criteria andNameNotLike(String value) {
-            addCriterion("name not like", value, "name");
-            return (Criteria) this;
-        }
-
-        public Criteria andNameIn(List<String> values) {
-            addCriterion("name in", values, "name");
-            return (Criteria) this;
-        }
-
-        public Criteria andNameNotIn(List<String> values) {
-            addCriterion("name not in", values, "name");
-            return (Criteria) this;
-        }
-
-        public Criteria andNameBetween(String value1, String value2) {
-            addCriterion("name between", value1, value2, "name");
-            return (Criteria) this;
-        }
-
-        public Criteria andNameNotBetween(String value1, String value2) {
-            addCriterion("name not between", value1, value2, "name");
+        public Criteria andAuthorNameNotBetween(String value1, String value2) {
+            addCriterion("author_name not between", value1, value2, "authorName");
             return (Criteria) this;
         }
     }

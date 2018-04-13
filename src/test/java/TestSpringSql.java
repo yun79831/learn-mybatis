@@ -1,11 +1,10 @@
-import com.learn.mybatis.mapper.TestMapper;
-import org.apache.ibatis.session.SqlSessionFactory;
+import com.learn.mybatis.beans.Author;
+import com.learn.mybatis.mapper.AuthorMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -17,10 +16,11 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class TestSpringSql {
     @Autowired
-    private TestMapper testMapper;
+    private AuthorMapper authorMapper;
+
     @Test
     public void test1() {
-        com.learn.mybatis.beans.Test test= testMapper.selectByPrimaryKey(2);
-        System.out.println(test.getName());
+        Author author = authorMapper.selectByPrimaryKey(2);
+        System.out.println(author.getAuthorName());
     }
 }

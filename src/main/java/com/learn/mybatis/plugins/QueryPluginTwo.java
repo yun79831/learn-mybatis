@@ -13,12 +13,12 @@ import java.util.Properties;
  * Created by ghost on 2018-04-13.
  */
 @Intercepts({@Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class})})
-public class QueryPlugin implements Interceptor {
+public class QueryPluginTwo implements Interceptor {
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
         MappedStatement mappedStatement = (MappedStatement) invocation.getArgs()[0];
         BoundSql boundSql = mappedStatement.getBoundSql(invocation.getArgs()[1]);
-        System.out.println(String.format("plugin 插件输出执行的sql=%s,param=%s", boundSql.getSql(), boundSql.getParameterObject()));
+        System.out.println(String.format(" Two plugin 插件输出执行的sql=%s,param=%s", boundSql.getSql(), boundSql.getParameterObject()));
         return invocation.proceed();
     }
 

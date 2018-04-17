@@ -12,9 +12,10 @@
         <typeHandler handler="com.learn.mybatis.typehandler.StringTypeHandler"/>
     </typeHandlers>
     
-    <!--<plugins>-->
-        <!--<plugin interceptor="com.learn.mybatis.plugins.QueryPlugin"></plugin>-->
-    <!--</plugins>-->
+    <plugins>
+        <plugin interceptor="com.learn.mybatis.plugins.QueryPluginTwo"></plugin>
+        <plugin interceptor="com.learn.mybatis.plugins.QueryPlugin"></plugin>
+    </plugins>
 
     <environments default="development">
         <environment id="development">

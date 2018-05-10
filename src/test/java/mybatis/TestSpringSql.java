@@ -1,3 +1,5 @@
+package mybatis;
+
 import com.learn.mybatis.beans.Author;
 import com.learn.mybatis.mapper.AuthorMapper;
 import org.junit.Test;

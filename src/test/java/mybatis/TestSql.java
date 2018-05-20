@@ -4,14 +4,9 @@ import com.learn.mybatis.beans.Author;
 import com.learn.mybatis.config.IntegrationMyBatisConfiguration;
 import com.learn.mybatis.mapper.AuthorMapper;
 import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 
 /**
  * Created by ghost on 2018-04-11.
